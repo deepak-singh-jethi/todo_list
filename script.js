@@ -69,7 +69,7 @@ function printData(listNumber, content, date, priority, box) {
 
            <div>
              <label for="status">
-              Task Status:- 
+              Update Status:- 
             </label>
 
             <select name="status" id="status-${listNumber}">
