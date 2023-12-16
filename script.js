@@ -53,8 +53,8 @@ function printData(listNumber, content, date, priority, box) {
   div.id = `item-${listNumber}`;
 
   div.innerHTML = `<label for="checkBox-${listNumber}">
-              <span class="material-icons" id="checkSpan-${listNumber}">fiber_manual_record </span>
-              <!-- <span class="material-icons">check_circle </span> -->
+              <span class="material-icons checkbox-color" id="checkSpan-${listNumber}">fiber_manual_record </span>
+              
             </label>
             <input type="checkbox" id="checkBox-${listNumber}"  checkBoxPointer = "checkSpan-${listNumber}"/>
             <div class="content" id="contentNumber-${listNumber}">
@@ -67,13 +67,20 @@ function printData(listNumber, content, date, priority, box) {
              Priority - ${priority}
             </div>
 
+           <div>
+             <label for="status">
+              Task Status:- 
+            </label>
+
             <select name="status" id="status-${listNumber}">
               <option value="items-todo">To-Do</option>
               <option value="items-inProgress">In Progress</option>
               <option value="items-completed">Completed</option>
             </select>
+            </div>
+          
 
-            <div>
+            <div class = item-btn>
              <button id="editBtn-${listNumber}" class="material-icons" contentPointer = "contentNumber-${listNumber}">edit</button>
 
 
@@ -111,9 +118,11 @@ function printData(listNumber, content, date, priority, box) {
     if (checkBox.checked) {
       checkSpanElement.innerText = "task_alt";
       content.classList.add("middleStroke");
+      checkSpanElement.classList.add("checkbox-label");
     } else {
       checkSpanElement.innerText = "fiber_manual_record";
       content.classList.remove("middleStroke");
+      checkSpanElement.classList.remove("checkbox-label");
     }
   });
 

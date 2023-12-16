@@ -219,4 +219,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
+.material-icons.checkbox-color {
+    color:  #1E6F9F;
+}
+
+.material-icons.checkbox-label {
+    border: none;
+    color: #8284F9 !important;
+}
+
+.item-btn{
+    display: flex;
+    gap: 20px;
+}
 
