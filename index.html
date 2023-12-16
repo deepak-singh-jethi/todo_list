@@ -21,6 +21,12 @@
           placeholder="ENTER YOUR TO-DO LIST TASK "
           name="content" />
         <input type="date" id="dateInput" required name="date" />
+
+        <select name="priority" id="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
         <button id="toDoBtn">
           ADD <span class="material-icons"> add_circle </span>
         </button>
@@ -32,30 +38,17 @@
       <div id="toDoConatiner" class="listContainer">
         <div id="toDooInfo" class="info">
           <h4>To Do <span id="toDoNumber">0</span></h4>
+          <div>Low Priority <span id="toDoLowPriority">0</span></div>
+
+          <div>Medium Priority <span id="toDoMediumPriority">0</span></div>
           <div>High Priority <span id="toDoHighPriority">0</span></div>
         </div>
 
-        <div class="items" id="items">
+        <div class="items" id="items-todo">
           <div class="noItemConatiner">
             <span class="material-icons"> description </span>
             <h4>You have no To-do items as of now</h4>
           </div>
-
-          <!-- <div id="item-1" class="item">
-            <label for="checkBox-1">
-              <span class="material-icons">fiber_manual_record </span>
-              <span class="material-icons">check-circle</span>
-
-            </label>
-            <input type="checkbox" id="checkBox-1" />
-            <div class="content" id="contentNumber-1">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
-              assumenda nesciunt reprehenderit dignissimos, impedit esse
-              voluptates repudiandae dolorem maxime minima.
-            </div>
-            <button id="editBtn" class="material-icons">edit</button>
-            <button id="deleteBtn" class="material-icons">delete</button>
-          </div> -->
         </div>
       </div>
 
@@ -63,25 +56,26 @@
       <div id="startedConatiner" class="listContainer">
         <div id="startedInfo" class="info">
           <h4>Started <span id="sartedNumber">0</span></h4>
-          <div>High Priority <span id="sartedHighPriority">0</span></div>
+          <div>Low Priority <span id="startedLowPriority">0</span></div>
+
+          <div>Medium Priority <span id="startedMediumPriority">0</span></div>
+          <div>High Priority <span id="startedHighPriority">0</span></div>
         </div>
-        <div class="items">
-          <div class="noItemConatiner">
-            <span class="material-icons"> description </span>
-            <h4>You have no started items as of now</h4>
-          </div>
-        </div>
+        <div class="items" id="items-inProgress"></div>
       </div>
 
       <!-- complete -->
       <div id="completedConatinerr" class="listContainer">
-        <div id="completeoInfo" class="info">
-          <h4>Completed <span id="completeNumber">10</span></h4>
+        <div id="completedInfo" class="info">
+          <h4>Completed <span id="completeNumber">0</span></h4>
+          <div>Low Priority <span id="compltetedLowPriority">0</span></div>
+
           <div>
-            High Priority <span id="completeHighPriority">5 of 10</span>
+            Medium Priority <span id="compltetedMediumPriority">0</span>
           </div>
+          <div>High Priority <span id="compltetedHighPriority">0</span></div>
         </div>
-        <div class="items"></div>
+        <div class="items" id="items-completed"></div>
       </div>
     </div>
 
