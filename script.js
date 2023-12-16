@@ -95,6 +95,7 @@ function printData(listNumber, content, date, priority, box) {
   updateCount(`${box}`, "add", priority);
 
   //evevnt listner for edit button
+
   const editBtn = document.querySelector(`#editBtn-${listNumber}`);
   editBtn.addEventListener("click", () => {
     const divId = editBtn.getAttribute("contentPointer");
@@ -163,10 +164,6 @@ function deleteItem(itemId, listNumber, priority) {
   updateCount(parentId, "sub", priority);
 
   item.parentNode.removeChild(item);
-  if (todoCount === 0) {
-    noItemConatiner.classList.remove("displayNone");
-    console.log("0");
-  }
 }
 
 //edit button functionality
@@ -229,5 +226,9 @@ function updateCountArray(countArray, index, operation) {
     countArray[index]++;
   } else {
     countArray[index]--;
+  }
+
+  if (todoCount[0] + todoCount[1] + todoCount[2] === 0) {
+    noItemConatiner.classList.remove("displayNone");
   }
 }
