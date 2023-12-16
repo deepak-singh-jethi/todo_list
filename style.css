@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background-color: #1a1a1a;
+}
+
+.logoAndInputs{
+   background-color: #0D0D0D;
+   width: 100vw;
+   height: 150px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
+.logo{
+    margin-top: 50px;
+}
+
+.toDoInput{
+    position: relative;
+    top: 21px;
+    display: flex;
+    gap: 20px;
+}
+.toDoInput input{
+    width: 600px;
+    height: 45px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #262626;
+    border-radius: 8px;
+    color: aliceblue;
+
+}
+
+#dateInput{
+    width: 200px !important;
+
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: grayscale(100%);
+}
+
+
+.toDoInput input:focus{
+    outline: none;
+}
+
+
+#toDoBtn{
+    padding: 10px 20px;
+    height: 45px;
+    background-color: #1E6F9F;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+
+/* list conatiner */
+
+#threeListConatiner{
+     height: 1000px;
+     padding-top: 100px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100vw;
+     margin-inline: auto;
+     color: white;
+     gap: 30px;
+}
+
+.info{
+   display: flex;
+   justify-content: space-between;
+  padding-bottom: 10px;
+   border-bottom: 2px solid #808080;
+
+}
+
+.info h4{
+    color: #4EA8DE;
+}
+
+.info div{
+    color: #8284FA;
+}
+
+.info div>span,h4>span{
+  color: white;
+  height: 40px;
+  width: 30px;
+  border: none;
+  color: #D9D9D9;
+  background-color: #333333;
+  padding:2px 8px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.listContainer{
+   width: 68%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+/* item list */
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.noItemConatiner{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.noItemConatiner>span{
+    font-size: 80px;
+    color: #3d3d3d;
+}
+
+.noItemConatiner>h4{
+    color: #808080;
+    font-weight: 200;
+}
+/* item card */
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #262626;
+    padding: 15px 30px;
+
+}
+ .item input {
+    display: none;
+}
+
+
+
+.item button {
+    background-color: #262626;
+    border: none;
+    color: #808080;
+}
+.item>label>span{
+    margin-top: 5px;
+}
+
+.content{
+    flex-grow: 1;
+}
+
+
+
+/* utility class */
+.displayNone{
+    display: none;
+}
+
+
+.displayInlineBlock{
+    display: inline-block;
+}
+
+
